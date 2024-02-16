@@ -1,5 +1,5 @@
 body {
-    background: rgb(64, 165, 224);
+    background: rgb(20, 20, 20);
     font-family: sans-serif, Arial, Helvetica;
     font-weight: bold;
 }
@@ -14,20 +14,18 @@ body {
     padding: 10px;
     padding: 20px 10px;
     margin: 10px;
-    background-color: royalblue;
-    box-shadow: 5px 5px rgb(25, 50, 124);
+    background-color: rgb(40, 40, 40);
+    box-shadow: 5px 5px rgb(0, 0, 0);
     border-radius: 5px;
 }
 
     .tutorial:hover {
-        filter: brightness(75%);
+        background-color: rgb(55, 55, 55);
     }
 
     .tutorial img {
         width: 200px;
         height: 200px;
-        border-radius: 15px;
-        border: 3px solid royalblue;
         display: block;
         margin: auto;
     }
@@ -49,21 +47,26 @@ body {
         }
 
 h1 {
-    color: white;
+    color: rgb(220, 220, 220);
     text-align: center;
-    -webkit-text-stroke-color: rgb(25, 50, 124);
-    -webkit-text-stroke-width: 1px;
 }
 
 h2 {
+    color: rgb(220, 220, 220);
+    text-align: center;
+}
+
+h3 {
+    color: rgb(220, 220, 220);
     text-align: center;
 }
 
 p {
+    color: rgb(220, 220, 220);
     text-align: justify;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(50, 160, 0);
 }
