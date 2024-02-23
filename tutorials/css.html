@@ -9,21 +9,444 @@
 
 <body>
     <h1>CS 451 Internet Technology Tutorials</h1>
-    <h2>CSS Tutorials<br /><a href="../index.html">Go Back</a></h2>
+    <h2>CSS Tutorials</h2>
 
-    <section class="language">
-        <h2>CSS</h2>
-        <!--
-        <h3>Cryptosporidium: <ins id="conIn0" contenteditable="true">0</ins>mg/L</h3>
-        <h3>Gladia lamblia: <ins id="conIn1" contenteditable="true">0</ins>mg/L</h3>
-        <h3>Heterotrophic plate count (HPC): <ins id="conIn2" contenteditable="true">0</ins>mg/L</h3>
-        <h3>Legionella: <ins id="conIn3" contenteditable="true">0</ins>mg/L</h3>
-        <h3>Total Coliforms (including fecal coliform and E. Coli): <ins id="conIn4" contenteditable="true">0</ins>%</h3>
-        <h3>Turbidity: <ins id="conIn5" contenteditable="true">0</ins>mg/L</h3>
-        <h3>Viruses (enteric): <ins id="conIn6" contenteditable="true">0</ins>mg/L</h3>
-        -->
+    <section class="button">
+        <a href="../index.html">
+            <h2>Go Back</h2>
+        </a>
     </section>
 
+    <!--Introduction-->
+    <section class="header">
+        <h3>Introduction</h3>
+    </section>
+    <section class="content">
+        <p>
+            CSS stands for Cascading Style Sheets<br />
+            CSS describes how HTML elements are to be displayed on screen, paper, or in other media<br />
+            CSS saves a lot of work, controlling the layout of multiple web pages all at once<br />
+            External stylesheets are stored in CSS files<br />
+            Differing CSS files can make immense changes to the design, layout, and variations in display for same HTML file<br />
+            Below is a sample CSS file that sets the style for the body, h1, and p tags:
+        </p>
+        <h4>
+            body {<br />
+            background-color: lightblue;<br />
+            }<br />
+            <br />
+            h1 {<br />
+            color: white;<br />
+            text-align: center;<br />
+            }<br />
+            <br />
+            p {<br />
+            font-family: verdana;<br />
+            font-size: 20px;<br />
+            }
+        </h4>
+    </section>
+
+    <!--Syntax-->
+    <section class="header">
+        <h3>Syntax</h3>
+    </section>
+    <section class="content">
+        <p>
+            A CSS rule consists of a selector and a declaration block, like so:
+        </p>
+        <h4>
+            h1 {<br />
+            color: blue;<br />
+            font-size: 12px;<br />
+            }
+        </h4>
+        <p>
+            The selector (h1) points to the HTML element you want to style<br />
+            The declaration blocks (color: blue; font-size: 12px;) contains declaration(s) ending with a semicolon<br />
+            Each declaration includes a CSS property name and a value, deparated by a colon<br />
+            Multiple CSS declatations are separated with semicolons, and declaration blocks are surrounded by curly braces<br />
+            Below is a sample of a CSS file that will change the color of &lt;p> text to red and align it to the center:
+        </p>
+        <h4>
+            p {<br />
+            color: red;<br />
+            text-align: center;<br />
+            }
+        </h4>
+    </section>
+
+    <!--Selectors-->
+    <section class="header">
+        <h3>Selectors</h3>
+    </section>
+    <section class="content">
+        <p>
+            A CSS selector selects the HTML element(s) you want to style<br />
+            CSS selectors can be divided into five categories:<br />
+            1) Simple selectors (select elements based on name, id, class)<br />
+            2) Combinator selectors (select elements based on a specific relationship between them)<br />
+            3) Pseudo-class selectors (select elements based on a certain state)<br />
+            4) Pseudo-elements selectors (select and style a part of an element)<br />
+            5) Attribute selectors (select elements based on an attribute or attribute value)<br />
+            <br />
+            The element selector selects HTML elements based on the element name, such as &lt;p> in the following sample:
+        </p>
+        <h4>
+            p {<br />
+            text-align: center;<br />
+            color: red;<br />
+            }
+        </h4>
+        <p>
+            The id selector uses the id attribute of an HTML element to select a specific element<br />
+            The id of an element is unique within a page, so the id selector is used to select one unique element<br />
+            To select an element based on its id, write a hash (#) character followed by the id, like so:
+        </p>
+        <h4>
+            #para1 {<br />
+            text-align: center;<br />
+            color: red;<br />
+            }
+        </h4>
+        <p>
+            The class selector selects HTML elements within a specific class attribute<br />
+            To select elements with a specific class, write a period (.) character followed by the class name, like so:
+        </p>
+        <h4>
+            .center {<br />
+            text-align: center;<br />
+            color: red;<br />
+            }
+        </h4>
+        <p>
+            You can also specify that only specific HTML elements should be affected by a class, such as &lt;p> elements with class center:
+        </p>
+        <h4>
+            p.center {<br />
+            text-align: center;<br />
+            color: red;<br />
+            }
+        </h4>
+        <p>
+            The universal selector (*) selects all HTML elements on the page:
+        </p>
+        <h4>
+            * {<br />
+            text-align: center;<br />
+            color: blue;<br />
+            }
+        </h4>
+        <p>
+            The grouping sleector selects all HTML elements with the same style definitions<br />
+            The sample code below sets the same style for the h1, h2, and p elements
+        </p>
+        <h4>
+            h1, h2, p {<br />
+            text-align: center;<br />
+            color: red;<br />
+            }
+        </h4>
+    </section>
+    
+    <!--Comments-->
+    <section class="header">
+        <h3>Comments</h3>
+    </section>
+    <section class="content">
+        <p>
+            Comments in CSS files follow the same rules as in HTML files<br />
+            Comments can be placed anywhere within the code, and will be ignored by web browsers<br />
+            A CSS comment starts with /* and ends with */, like so:
+        </p>
+        <h4>
+            p {<br />
+            color: red;  /* Set text color to red */<br />
+            }
+        </h4>
+    </section>
+
+    <!--Colors-->
+    <section class="header">
+        <h3>Colors</h3>
+    </section>
+    <section class="content">
+        <p>
+            Colors can be specified using predefined color names, RGB, HEX, HSL, RGBA, or HSLA values<br />
+            HTML/CSS supports 140 standard color names, such as Orange, MediumSeaGreen, and Violet<br />
+            You can set the background color of HTML elements like so:
+        </p>
+        <h4>
+            &lt;h1 style="background-color:DodgerBlue;">Hello World&lt;/h1>
+            &lt;p style="background-color:Tomato;">Lorem ipsum...&lt;/p>
+        </h4>
+        <p>
+            You can set the color of text like so:
+        </p>
+        <h4>
+            &lt;h1 style="color:Tomato;">Hello World&lt;/h1>
+            &lt;p style="color:DodgerBlue;">Lorem ipsum...&lt;/p>
+            &lt;p style="color:MediumSeaGreen;">Ut wisi enim...&lt;/p>
+        </h4>
+        <p>
+            You can set the color of borders like so:
+        </p>
+        <h4>
+            &lt;h1 style="border:2px solid Tomato;">Hello World&lt;/h1>
+            &lt;h1 style="border:2px solid DodgerBlue;">Hello World&lt;/h1>
+            &lt;h1 style="border:2px solid Violet;">Hello World&lt;/h1>
+        </h4>
+    </section>
+
+    <!--Backgrounds-->
+    <section class="header">
+        <h3>Backgrounds</h3>
+    </section>
+    <section class="content">
+        <p>
+            The CSS background properties are used to add background effects for elements<br />
+            The bckground color of a page is set like so:
+        </p>
+        <h4>
+            body {<br />
+            background-color: lightblue;<br />
+            }
+        </h4>
+        <p>
+            The opacity property specifies the opacity/transparency of an element<br />
+            It can take a value between 0.0 and 1.0<br />
+            The lower the value, the more transparent:
+        </p>
+        <h4>
+            div {<br />
+            background-color: green;<br />
+            opacity: 0.3;<br />
+            }
+        </h4>
+        <p>
+            You can also specify the opacity of the background using RGBA, like so:
+        </p>
+        <h4>
+            div {<br />
+            background: rgba(0, 128, 0, 0.3) /* Green background with 30% opacity */<br />
+            }
+        </h4>
+    </section>
+
+    <!--Borders-->
+    <section class="header">
+        <h3>Borders</h3>
+    </section>
+    <section class="content">
+        <p>
+            The CSS border properties allow you to specify the style, width, and color of an element's border<br />
+            The border-style property specifies what kind of border to display, such as:<br />
+            1) dotted - Defines a dotted border<br />
+            2) dashed - Defines a dashed border<br />
+            3) solid - Defines a solid border<br />
+            4) double - Defines a double border<br />
+            5) hidden - Defines a hidden border<br />
+            The border-style property can have one to four values, each specifying the top, right, bottom, and left borders like so:
+        </p>
+        <h4>
+            p.dotted {border-style: dotted;}<br />
+            p.dashed {border-style: dashed;}<br />
+            p.solid {border-style: solid;}<br />
+            p.double {border-style: double;}<br />
+            p.groove {border-style: groove;}<br />
+            p.ridge {border-style: ridge;}<br />
+            p.inset {border-style: inset;}<br />
+            p.outset {border-style: outset;}<br />
+            p.none {border-style: none;}<br />
+            p.hidden {border-style: hidden;}<br />
+            p.mix {border-style: dotted dashed solid double;}
+        </h4>
+    </section>
+
+    <!--Margins-->
+    <section class="header">
+        <h3>Margins</h3>
+    </section>
+    <section class="content">
+        <p>
+            Margins are used to create space around elements, outside of any defined borders<br />
+            CSS has properties that specify the margin for each side of an element:<br />
+            1) margin-top<br />
+            2) margin-right<br />
+            3) margin-bottom<br />
+            4) margin-left<br />
+            <br />
+            All the margin properties can have the following values:<br />
+            1) auto - the browser calculates the margin<br />
+            2) length - specifies a margin in px, pt, cm, etc.<br />
+            3) % - specifies a margin in % of the width of the containing element<br />
+            4) inherit - specifies that the margin should be inherited from the parent element<br />
+            Negative values are allowed!<br />
+            Below is a sample of diffferent margins for all four sides of a &lt;p> element:
+        </p>
+        <h4>
+            p {<br />
+            margin-top: 100px;<br />
+            margin-bottom: 100px;<br />
+            margin-right: 150px;<br />
+            margin-left: 80px;<br />
+            }
+        </h4>
+        <p>
+            If the margin property has four values, it will set the top, right, bottom, and left margins respectively:
+        </p>
+        <h4>
+            p {<br />
+            margin: 25px 50px 75px 100px;<br />
+            }
+        </h4>
+        <p>
+            If the margin property has three values, it will set the top, right AND left, and the bottom margins respectively
+        </p>
+        <h4>
+            p {<br />
+            margin: 25px 50px 75px;<br />
+            }
+        </h4>
+        <p>
+            If the margin property has two values, it will set the top AND bottom, and the right AND left margins respectively
+        </p>
+        <h4>
+            p {<br />
+            margin: 25px 50px;<br />
+            }
+        </h4>
+        <p>
+            If the margin property has one value, it will set all margins<br />
+            <br />
+            You can set the margin property to auto to horizontally center the element within its container<br />
+            The element will take up the specified width, then the remaining space will be split evenly between the left and right margins, like so:
+        </p>
+        <h4>
+            div {<br />
+            width: 300px;<br />
+            margin: auto;<br />
+            border: 1px solid red;<br />
+            }
+        </h4>
+    </section>
+
+    <!--Padding-->
+    <section class="header">
+        <h3>Padding</h3>
+    </section>
+    <section class="content">
+        <p>
+            Padding is used to create space around an element's content, inside of any defined borders
+        </p>
+    </section>
+
+    <!--Height/Width-->
+    <section class="header">
+        <h3>Height/Width</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Box Model-->
+    <section class="header">
+        <h3>Box Model</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Outline-->
+    <section class="header">
+        <h3>Outline</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Text-->
+    <section class="header">
+        <h3>Text</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Fonts-->
+    <section class="header">
+        <h3>Fonts</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Links-->
+    <section class="header">
+        <h3>Links</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Position-->
+    <section class="header">
+        <h3>Position</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Float-->
+    <section class="header">
+        <h3>Float</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Align-->
+    <section class="header">
+        <h3>Align</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+    <!--Opacity-->
+    <section class="header">
+        <h3>Opacity</h3>
+    </section>
+    <section class="content">
+        <p>
+            Content
+        </p>
+    </section>
+
+
+    <section class="button">
+        <a href="../index.html">
+            <h2>Go Back</h2>
+        </a>
+    </section>
 </body>
 
 </html>

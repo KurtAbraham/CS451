@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CSS Tutorials</title>
+    <title>HTML Tutorials</title>
     <link rel="stylesheet" href="tutorialStyles.css">
 </head>
 
@@ -17,14 +17,308 @@
         </a>
     </section>
 
+    <!--Introduction-->
     <section class="header">
-        <h3>Header</h3>
+        <h3>Introduction</h3>
     </section>
-
     <section class="content">
-        <p>Content</p>
+        <p>
+            HTML stands for "Hyper Text Markup Language"<br />
+            HTML is the standard markup language for making websites<br />
+            HTML tells web browsers how to display various content<br />
+            <br />
+            A sample HTML document is shown below:
+        </p>
+        <h4>
+            &lt;!DOCTYPE html><br />
+            &lt;html><br />
+            &lt;head><br />
+            &lt;title>Page Title&lt;/title><br />
+            &lt;/head><br />
+            &lt;body><br />
+            <br />
+            &lt;h1>Sample Heading&lt;/h1><br />
+            &lt;p>Sample paragraph&lt;/p><br />
+            <br />
+            &lt;/body><br />
+            &lt;/html><br />
+        </h4>
+        <p>
+            Here is an explanation of the sample HTML document:<br />
+            The &lt;!DOCTYPE html> declaration defines that this document is an HTML5 document<br />
+            The &lt;html> element is the root element of an HTML page<br />
+            The &lt;head> element contains meta information about the HTML page<br />
+            The &lt;title> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)<br />
+            The &lt;body> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.<br />
+            The &lt;h1> element defines a large heading<br />
+            The &lt;p> element defines a paragraph
+        </p>
     </section>
 
+    <!--Basics-->
+    <section class="header">
+        <h3>Basics</h3>
+    </section>
+    <section class="content">
+        <p>
+            All HTML documents must start with a document type declaration: &lt;!DOCTYPE html><br />
+            The HTML document itself begins with &lt;html> and ends with &lt;/html>.<br />
+            The visible part of the HTML document is between &lt;body> and &lt;/body><br />
+            <br />
+            HTML headings are defined with the &lt;h1> to &lt;h6> tags<br />
+            &lt;h1> defines the most important heading. &lt;h6> defines the least important heading<br />
+            Some sample headers are listed below:
+        </p>
+        <h4>
+            &lt;h1>This is heading 1&lt;/h1><br />
+            &lt;h2>This is heading 2&lt;/h2><br />
+            &lt;h3>This is heading 3&lt;/h3>
+        </h4>
+        <p>
+            HTML paragraphs are defined with the &lt;p> tag<br />
+            <br />
+            HTML links are defined with the &lt;a> tag, like so:
+        </p>
+        <h4>
+            &lt;a href="https://www.w3schools.com">This is a link to W3Schools&lt;/a>
+        </h4>
+        <p>
+            HTML images are defined with the &lt;img> tag<br />
+            The source file (src), alternative text (alt), width, and height are provided as attributes, like so:
+        </p>
+        <h4>
+            &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"><br />
+        </h4>
+    </section>
+
+    <!--Elements-->
+    <section class="header">
+        <h3>Elements</h3>
+    </section>
+    <section class="content">
+        <p>
+            HTML elements are everything from the start tag to the end tag
+        </p>
+        <h4>
+            &lt;tagname>Content goes here&lt;/tagname>
+        </h4>
+        <p>
+            HTML elements can be nested, or in other words, contained within other elements<br />
+            The following sample HTML docuement utilizes elements nested within the body, which is nested within the html element:
+        </p>
+        <h4>
+            &lt;!DOCTYPE html><br />
+            &lt;html><br />
+            &lt;head><br />
+            &lt;title>Page Title&lt;/title><br />
+            &lt;/head><br />
+            &lt;body><br />
+            <br />
+            &lt;h1>Sample Heading&lt;/h1><br />
+            &lt;p>Sample paragraph&lt;/p><br />
+            <br />
+            &lt;/body><br />
+            &lt;/html><br />
+        </h4>
+        <p>
+            A good rule of thumb is to NEVER forget the end tag!<br />
+            Errors may occur without end tags<br />
+            <br />
+            However, some elements are empty and do not require an end tag<br />
+            An example is the &lt;br> tag, which stands for a line break, like so:
+        </p>
+        <h4>
+            &lt;p>This is a &lt;br> paragraph with a line break.&lt;/p>
+        </h4>
+    </section>
+
+    <!--Attributes-->
+    <section class="header">
+        <h3>Attributes</h3>
+    </section>
+    <section class="content">
+        <p>
+            All HTML attributes can have attributes<br />
+            Attributes provide additional information about elements, like arguments<br />
+            Attributes are specified in the start tag, and typically come in name/value pairs<br />
+            <br />
+            The &lt;a> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to, like so:
+        </p>
+        <h4>
+            &lt;a href="https://www.w3schools.com">Visit W3Schools&lt;/a>
+        </h4>
+        <p>
+            The &lt;img> tag is used to embed an image in an HTML page. The src attribute specified the path to the image to be displayed, like so:
+        </p>
+        <h4>
+            &lt;img src="img_painting1.jpg">
+        </h4>
+        <p>
+            The &lt;img> attribute can also contain a an alt attribute, which specifies alternate text in case the image cannot be displayed, like so:
+        </p>
+        <h4>
+            &lt;img src="img_painting1.jpg alt="Painting of the Mona Lisa">
+        </h4>
+        <p>
+            The title attribute defines extra information about an element when it is hovered over with the mouse:
+        </p>
+        <h4>
+            &lt;p title="It's just sample text">This is some sample text&lt;/p>
+        </h4>
+        <p>
+            A good rule of thumb is to ALWAYS put quotation marks around attribute values!<br />
+            Errors may occur without quotation marks<br />
+            You may use 'single quotes' or "double quotes," and in some cases, both will be required
+        </p>
+    </section>
+
+    <!--Comments-->
+    <section class="header">
+        <h3>Comments</h3>
+    </section>
+    <section class="content">
+        <p>
+            Comments are not displayed in the web browser, but can help document HTML source code<br />
+            HTML comments are added using the following syntax:
+        </p>
+        <h4>
+            &lt;!-- Comments go here -->
+        </h4>
+        <p>
+            An exclamation point is needed in the start tag, but not the end tag<br />
+            <br />
+            Comments can be used to provide reminders for future editors of the program<br />
+            Comments can also be used to hide content temporarily from the web browser, like so:
+        </p>
+        <h4>
+            &lt;!--<br />
+            &lt;p>This paragraph is currently hidden&lt;/p><br />
+            -->
+        </h4>
+        <p>
+            Comments can hide parts in the middle of HTML code on one line, like so:
+        </p>
+        <h4>
+            &lt;p>I &lt;!-- truly do --> hope you understand!&lt;p>
+        </h4>
+    </section>
+
+    <!--Links-->
+    <section class="header">
+        <h3>Links</h3>
+    </section>
+    <section class="content">
+        <p>
+            HTML links are hyperlinks<br />
+            You can click on a link to jump to another document<br />
+            When you hover over a link, the mouse arrow will turn into a pointing hand<br />
+            <br />
+            The HTML &lt;a> tag defines a hyperlink and has the following syntax:
+        </p>
+        <h4>
+            &lt;a href="url">link text&lt;/a>
+        </h4>
+        <p>
+            The href attribute indicates the link's destination<br />
+            The link text is the part that will be visible to the end users<br />
+            clicking on the link text will send the user to the specified URL address<br />
+            <br />
+            An absolute URL addresses a full web address (using the "https://www" part)<br />
+            A relative URL addresses a local link (without using the "https://www" part)<br />
+            The sample links below show the difference between absolute and relative URLs respectively
+        </p>
+        <h4>
+            &lt;h2>Absolute URLs&lt;/h2><br />
+            &lt;p>&lt;a href="https://www.w3.org/">W3C&lt;/a>&lt;/p><br />
+            &lt;p>&lt;a href="https://www.google.com/">Google&lt;/a>&lt;/p><br />
+            <br />
+            &lt;h2>Relative URLs&lt;/h2><br />
+            &lt;p>&lt;a href="html_images.asp">HTML Images&lt;/a>&lt;/p><br />
+            &lt;p>&lt;a href="/css/default.asp">CSS Tutorial&lt;/a>&lt;/p>
+        </h4>
+        <p>
+            You can use links to open the user's email program to send an email to a specified address:
+        </p>
+        <h4>
+            &lt;a href="mailto:someone@example.com">Send email&lt;/a>
+        </h4>
+    </section>
+
+    <!--Images-->
+    <section class="header">
+        <h3>Images</h3>
+    </section>
+    <section class="content">
+        <p>
+            Images can greatly improve the design and appearance of the webpage<br />
+            The &lt;img> tag is empty and contains attributes only, and thus does not need an end tag<br />
+            It does, however, have two required attributes:<br />
+            1) src - Specifies the path to the image<br />
+            2) alt - Specifies an alternate text for the image<br />
+            <br />
+            The syntax for images are as follows:
+        </p>
+        <h4>
+            &lt;img src="url" alt="alternatetext">
+        </h4>
+        <p>
+            If a website's images are stored in another subfolder, you must include the folder name in the src attribute:
+        </p>
+        <h4>
+            &lt;img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+        </h4>
+        <p>
+            If a website uses an image from another server, the absolute URL must be specified in the src attribute:
+        </p>
+        <h4>
+            &lt;img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+        </h4>
+        <p>
+            Images can be used as a link by putting the &lt;img> tag inside the &lt;a> tag:
+        </p>
+        <h4>
+            &lt;a href="default.asp"><br />
+            &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"><br />
+            &lt;/a>
+        </h4>
+    </section>
+
+    <!--File Paths-->
+    <section class="header">
+        <h3>File Paths</h3>
+    </section>
+    <section class="content">
+        <p>
+            A file path describes the location of a file in a website's folder structure<br />
+            File paths are used when linking to external files, such as:<br />
+            1) Web pages<br />
+            2) Images<br />
+            3) Style sheets<br />
+            4) JavaScripts<br />
+            An absolute file path is the full URL to a file:
+        </p>
+        <h4>
+            &lt;img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">
+        </h4>
+        <p>
+            A relative file path points to a file relative to the current page<br />
+            The following sample points to a file in the images folder located at the root of the current webpage:
+        </p>
+        <h4>
+            &lt;img src="/images/picture.jpg" alt="Mountain">
+        </h4>
+        <p>
+            A good rule of thumb is to use relative file paths as much as possible!<br />
+            While using relative file paths, web pages will not be bound to the current base URL<br />
+            All links will work locally
+        </p>
+    </section>
+
+    <section class="button">
+        <a href="../index.html">
+            <h2>Go Back</h2>
+        </a>
+    </section>
 </body>
 
 </html>

@@ -62,9 +62,15 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    color: rgb(220, 220, 220);
+    font: 12px courier new;
+}
+
 p {
     color: rgb(220, 220, 220);
     text-align: justify;
+    font-weight: 100;
 }
 
 a {
