@@ -64,8 +64,8 @@
         <p>
             The selector (h1) points to the HTML element you want to style<br />
             The declaration blocks (color: blue; font-size: 12px;) contains declaration(s) ending with a semicolon<br />
-            Each declaration includes a CSS property name and a value, deparated by a colon<br />
-            Multiple CSS declatations are separated with semicolons, and declaration blocks are surrounded by curly braces<br />
+            Each declaration includes a CSS property name and a value, separated by a colon<br />
+            Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces<br />
             Below is a sample of a CSS file that will change the color of &lt;p> text to red and align it to the center:
         </p>
         <h4>
@@ -138,7 +138,7 @@
             }
         </h4>
         <p>
-            The grouping sleector selects all HTML elements with the same style definitions<br />
+            The grouping selector selects all HTML elements with the same style definitions<br />
             The sample code below sets the same style for the h1, h2, and p elements
         </p>
         <h4>
@@ -205,7 +205,7 @@
     <section class="content">
         <p>
             The CSS background properties are used to add background effects for elements<br />
-            The bckground color of a page is set like so:
+            The background color of a page is set like so:
         </p>
         <h4>
             body {<br />
@@ -282,7 +282,7 @@
             3) % - specifies a margin in % of the width of the containing element<br />
             4) inherit - specifies that the margin should be inherited from the parent element<br />
             Negative values are allowed!<br />
-            Below is a sample of diffferent margins for all four sides of a &lt;p> element:
+            Below is a sample of different margins for all four sides of a &lt;p> element:
         </p>
         <h4>
             p {<br />
@@ -337,8 +337,46 @@
     </section>
     <section class="content">
         <p>
-            Padding is used to create space around an element's content, inside of any defined borders
+            Padding is used to create space around an element's content, inside of any defined borders<br />
+            CSS has properties for specifying the madding for each side of an element:<br />
+            1) padding-top<br />
+            2) padding-right:<br />
+            3) padding-bottom:<br />
+            4) padding-left:<br />
+            Padding can have the following values:<br />
+            1) length - specifies a padding in px, pt, cm, etc.<br />
+            2) % - specifies a padding in % of the width of the containing element<br />
+            3) inherit - specifies that the padding should be inherited from the parent element<br />
+            Negative values are not allowed for padding<br />
+            <br />
+            Below is a sample of padding:
         </p>
+        <h4>
+            div {<br />
+            padding-top: 50px;<br />
+            padding-right: 30px;<br />
+            padding-bottom: 50px;<br />
+            padding-left: 80px;<br />
+            }
+        </h4>
+        <p>
+            Padding can have up to four values for each side, just like margins:
+        </p>
+        <h4>
+            div {<br />
+            padding: 25px 50px 75px 100px;<br />
+            }
+        </h4>
+        <p>
+            Padding adds extra width to elements, so the following sample has a div element width of 350px<br />
+            The width of the element itself is 300px, but the padding of 25px adds the extra 50px width:
+        </p>
+        <h4>
+            div {<br />
+            width: 300px;<br />
+            padding: 25px;<br />
+            }
+        </h4>
     </section>
 
     <!--Height/Width-->
@@ -347,8 +385,36 @@
     </section>
     <section class="content">
         <p>
-            Content
+            The CSS height and width properties are used to set the height and width of an element<br />
+            Height and width can have the following values:<br />
+            1) auto - This is default. The browser calculates the height and width<br />
+            2) length - Defines the height/width in px, cm, etc.<br />
+            3) % - Defines the height/width in percent of the containing block<br />
+            4) initial - Sets the height/width to its default value<br />
+            5) inherit - The height/width will be inherited from its parent value<br />
+            <br />
+            The following sample element has a set height of 200px and a width of 50% of the containing block:
         </p>
+        <h4>
+            div {<br />
+            height: 200px;<br />
+            width: 50%;<br />
+            }
+        </h4>
+        <p>
+            Height and width DO NOT include padding, borders, and margins!<br />
+            Instead, height and width set the area inside padding, borders, and margins<br />
+            <br />
+            The max-width property can set the maximum width of an element<br />
+            The max width enables the element to change its width when the size of the browser window is changed, like so:
+        </p>
+        <h4>
+            div {<br />
+            max-width: 500px;<br />
+            height: 100px;<br />
+            background-color: powderblue;<br />
+            }
+        </h4>
     </section>
 
     <!--Box Model-->
@@ -357,7 +423,26 @@
     </section>
     <section class="content">
         <p>
-            Content
+            The term "box model" is used when talking about design and layout<br />
+            The box model is a box that wraps around every HTML element:<br />
+            1) Content - The content of the box, where text and images appear<br />
+            2) Padding - Clears an area around the content. The padding is transparent<br />
+            3) Border - A border that goes around the padding and content<br />
+            4) Margin - Clears an area outside the border. The margin is transparent<br />
+            Below is a sample of an element that contains content, padding, border, and margin:
+        </p>
+        <h4>
+            div {
+            width: 300px;<br />
+            border: 15px solid green;<br />
+            padding: 50px;<br />
+            margin: 20px;<br />
+            }
+        </h4>
+        <p>
+            The total width and height of an element is effected by the box model<br />
+            The sample above has a width of 470px total:<br />
+            Width of 300px + border of 30px + padding of 100px + margin of 40px = 470px
         </p>
     </section>
 
@@ -367,8 +452,38 @@
     </section>
     <section class="content">
         <p>
-            Content
+            An outline is a line drawn outside the element's border to make the element stand out<br />
+            Outline has the following properties:<br />
+            1) outline-style<br />
+            2) outline-color<br />
+            3) outline-width<br />
+            4) outline-offset<br />
+            5) Outline<br />
+            Unlike borders, outlines may overlap with other elements<br />
+            <br />
+            1) The outline-style property specifies the style of the outline, and can have one of the following properties:<br />
+            2) dotted - Defines a dotted outline<br />
+            3) dashed - Defines a dashed outline<br />
+            4) solid - Defines a solid outline<br />
+            5) double - Defines a double outline<br />
+            6) groove - Defines a 3D grooved outline<br />
+            7) ridge - Defines a 3D ridged outline<br />
+            8) inset - Defines a 3D inset outline<br />
+            9) outset - Defines a 3D outset outline<br />
+            10) none - Defines no outline<br />
+            11) hidden - Defines a hidden outline<br />
+            The following sample shows different outline-style values:
         </p>
+        <h4>
+            p.dotted {outline-style: dotted;}<br />
+            p.dashed {outline-style: dashed;}<br />
+            p.solid {outline-style: solid;}<br />
+            p.double {outline-style: double;}<br />
+            p.groove {outline-style: groove;}<br />
+            p.ridge {outline-style: ridge;}<br />
+            p.inset {outline-style: inset;}<br />
+            p.outset {outline-style: outset;}
+        </h4>
     </section>
 
     <!--Text-->
@@ -377,8 +492,167 @@
     </section>
     <section class="content">
         <p>
-            Content
+            CSS can format text in numerous ways!<br />
+            <br />
+            The color property is used to set the color of text
         </p>
+        <h4>
+            body {<br />
+            color: blue;<br />
+            }<br />
+            <br />
+            h1 {<br />
+            color: green;<br />
+            }
+        </h4>
+        <p>
+            The text-align property is used to set the horizontal alignment of text<br />
+            Text can be left or right aligned, centered, or justified<br />
+            <br />
+            The text-align-last property specifies how to align the last line of text, like so:
+        </p>
+        <h4>
+            p.a {<br />
+            text-align-last: right;<br />
+            }<br />
+            <br />
+            p.b {<br />
+            text-align-last: center;<br />
+            }<br />
+            <br />
+            p.c {<br />
+            text-align-last: justify;<br />
+            }
+        </h4>
+        <p>
+            The direction and unicode-bidi properties can be used to change the text direction of an element, like so:
+        </p>
+        <h4>
+            p {<br />
+            direction: rtl;<br />
+            unicode-bidi: bidi-override;<br />
+            }
+        </h4>
+        <p>
+            The vertical-align property sets the vertical alignment of an element, like so:
+        </p>
+        <h4>
+            img.a {<br />
+            vertical-align: baseline;<br />
+            }<br />
+            <br />
+            img.b {<br />
+            vertical-align: text-top;<br />
+            }<br />
+            <br />
+            img.c {<br />
+            vertical-align: text-bottom;<br />
+            }<br />
+            <br />
+            img.d {<br />
+            vertical-align: sub;<br />
+            }<br />
+            <br />
+            img.e {<br />
+            vertical-align: super;<br />
+            }
+        </h4>
+        <p>
+            The text-decoration-line property is used to add a decoration line to text<br />
+            Text decoration lines can have their color, style, and thickness specified with the following properties:<br />
+            1) text-decoration-color<br />
+            2) text-decoration-style<br />
+            3) text-decoration-thickness<br />
+            Below is a sample of text that has text decoration lines using all of the properties:
+        </p>
+        <h4>
+            p {<br />
+            text-decoration-line: underline;<br />
+            text-decoration-color: red;<br />
+            text-decoration-style: double;<br />
+            text-decoration-thickness: 5px;<br />
+            }
+        </h4>
+        <p>
+            The text-transform property is used to specify uppercase and lowercase letters in a text<br />
+            It can turn everything into UPPERCASE, lowercase, or capitalize the first letter of each word like so:
+        </p>
+        <h4>
+            p.uppercase {<br />
+            text-transform: uppercase;<br />
+            }<br />
+            <br />
+            p.lowercase {<br />
+            text-transform: lowercase;<br />
+            }<br />
+            <br />
+            p.capitalize {<br />
+            text-transform: capitalize;<br />
+            }
+        </h4>
+        <p>
+            The text-indent property specifies the indentation of the first line of text:
+        </p>
+        <h4>
+            p {<br />
+            text-indent: 50px;<br />
+            }
+        </h4>
+        <p>
+            The letter-spacing property is used to specify the space between the characters in a text, and can be negative:
+        </p>
+        <h4>
+            h1 {<br />
+            letter-spacing: 5px;<br />
+            }<br />
+            <br />
+            h2 {<br />
+            letter-spacing: -2px;<br />
+            }
+        </h4>
+        <p>
+            The line-height property specifies the space between lines:
+        </p>
+        <h4>
+            p.small {<br />
+            line-height: 0.8;<br />
+            }<br />
+            <br />
+            p.big {<br />
+            line-height: 1.8;<br />
+            }
+        </h4>
+        <p>
+            The word-spacing property specifies the space between the words in a text:
+        </p>
+        <h4>
+            p.one {<br />
+            word-spacing: 10px;<br />
+            }<br />
+            <br />
+            p.two {<br />
+            word-spacing: -2px;<br />
+            }
+        </h4>
+        <p>
+            The white-space property specifies how white-space inside an element is handled:
+        </p>
+        <h4>
+            p {<br />
+            white-space: nowrap;<nr></nr>
+            }
+        </h4>
+        <p>
+            The tetx-shadow property adds shadow to text<br />
+            By default, text shadows are 2px by 2px<br />
+            Text shadows can be blurred, colored, and overlapped with other shadows like so:
+        </p>
+        <h4>
+            h1 {<br />
+            color: white;<br />
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;<br />
+            }
+        </h4>
     </section>
 
     <!--Fonts-->
@@ -387,8 +661,53 @@
     </section>
     <section class="content">
         <p>
-            Content
+            Using the right fonts for websites are very important<br />
+            The font-family property specifies the font of a text<br />
+            The font-family property can hold several font names as a backup in case other fonts are incompatible with some browsers/operating systems<br />
+            The leftmost font takes prioriety over the fonts to the right<br />
+            Below is a sample of different fonts that are being specified for three paragraphs:
         </p>
+        <h4>
+            .p1 {<br />
+            font-family: "Times New Roman", Times, serif;<br />
+            }<br />
+            <br />
+            .p2 {<br />
+            font-family: Arial, Helvetica, sans-serif;<br />
+            }<br />
+            <br />
+            .p3 {<br />
+            font-family: "Lucida Console", "Courier New", monospace;<br />
+            }
+        </h4>
+        <p>
+            The font-size property sets the size of the text<br />
+            The font size can be set to pixels<br />
+            Font size can also be set to units of em, which allows users to resize the text in the browser menu<br />
+            1em is equal to the current font size, and the default font size in browsers is 16px<br />
+            A good rule of thumb is to always use em instead of pixels!<br />
+            Below is a sample of fonts set to em followed by size calculations:
+        </p>
+        <h4>
+            h1 {<br />
+            font-size: 2.5em; /* 40px/16=2.5em */<br />
+            }<br />
+            <br />
+            h2 {<br />
+            font-size: 1.875em; /* 30px/16=1.875em */<br />
+            }<br />
+            <br />
+            p {<br />
+            font-size: 0.875em; /* 14px/16=0.875em */<br />
+            }
+        </h4>
+        <p>
+            Text size can also be set with vw units, which means "viewport width"<br />
+            The size of text will follow the size of the browser window, like so:
+        </p>
+        <h4>
+            &lt;h1 style="font-size:10vw">Hello World&lt;/h1>
+        </h4>
     </section>
 
     <!--Links-->
@@ -397,8 +716,77 @@
     </section>
     <section class="content">
         <p>
-            Content
+            Links can be styled with any CSS property just like regular text<br />
+            In addition, links can change style depending on what state they are in:<br />
+            1) a:link - a normal, unvisited link<br />
+            2) a:visited - a link the user has visited<br />
+            3) a:hover - a link when the user mouses over it<br />
+            4) a:active - a link the moment it is clicked<br />
+            Below is a sample of stylings for the four different states of links:
         </p>
+        <h4>
+            /* unvisited link */<br />
+            a:link {<br />
+            color: red;<br />
+            }<br />
+            <br />
+            /* visited link */<br />
+            a:visited {<br />
+            color: green;<br />
+            }<br />
+            <br />
+            /* mouse over link */<br />
+            a:hover {<br />
+            color: hotpink;<br />
+            }<br />
+            <br />
+            /* selected link */<br />
+            a:active {<br />
+            color: blue;<br />
+            }
+        </h4>
+        <p>
+            There are some rules when setting styles for several link states:<br />
+            1) a:hover MUST come after a:link and a:visited<br />
+            2) a:active MUST come after a:hover<br />
+            <br />
+            The text-decoration property can be used to remove underlines from links like so:
+        </p>
+        <h4>
+            a:link {<br />
+            text-decoration: none;<br />
+            }<br />
+            <br />
+            a:visited {<br />
+            text-decoration: none;<br />
+            }<br />
+            <br />
+            a:hover {<br />
+            text-decoration: underline;<br />
+            }<br />
+            <br />
+            a:active {<br />
+            text-decoration: underline;<br />
+            }
+        </h4>
+        <p>
+            <br />
+            Below is a sample that demonstrates an advanced method to display links as buttons or boxes:
+        </p>
+        <h4>
+            a:link, a:visited {<br />
+            background-color: #f44336;<br />
+            color: white;<br />
+            padding: 14px 25px;<br />
+            text-align: center;<br />
+            text-decoration: none;<br />
+            display: inline-block;<br />
+            }<br />
+            <br />
+            a:hover, a:active {<br />
+            background-color: red;<br />
+            }
+        </h4>
     </section>
 
     <!--Position-->
@@ -407,8 +795,66 @@
     </section>
     <section class="content">
         <p>
-            Content
+            The position property specifies the type of positioning method used for an element<br />
+            The methods that can be used include static, relative, fixed, absolute, and sticky<br />
+            <br />
+            An element with position: static; is not positioned in any special way<br />
+            Instead, it is positioned according to the normal flow of the page<br />
+            <br />
+            An element with position: relative; is positioned relative to its normal position<br />
+            Other content will not be adjusted to fit into any gap left by the element<br />
+            <br />
+            An element with position: fixed; is positioned relative to the viewport<br />
+            It will not leave a gap where it would normally be located<br />
+            It will stay in the same place even if the page is scrolled<br />
+            <br />
+            An element with position: absolute; is positioned relative to the nearest positioned ancestor<br />
+            If there are no posiitoned ancestors, it uses the document body and moves along with page scrolling<br />
+            Absolute positioned elements can overlap elements and are removed from the normal flow of the webpage<br />
+            <br />
+            An element with position: sticky; is positioned based on the user's scroll position<br />
+            A sticky element toggles between relative and fixed depending on the scroll position<br />
+            In other words, the element will scroll inside a container and "stick" to the edges of the container<br />
+            <br />
+            Below is a compilation of the properties mentioned above:
         </p>
+        <h4>
+            div.static {<br />
+            position: static;<br />
+            border: 3px solid #73AD21;<br />
+            }<br />
+            <br />
+            div.relative {<br />
+            position: relative;<br />
+            left: 30px;<br />
+            border: 3px solid #73AD21;<br />
+            }<br />
+            <br />
+            div.fixed {<br />
+            position: fixed;<br />
+            bottom: 0;<br />
+            right: 0;<br />
+            width: 300px;<br />
+            border: 3px solid #73AD21;<br />
+            }<br />
+            <br />
+            div.absolute {<br />
+            position: absolute;<br />
+            top: 80px;<br />
+            right: 0;<br />
+            width: 200px;<br />
+            height: 100px;<br />
+            border: 3px solid #73AD21;<br />
+            }<br />
+            <br />
+            div.sticky {<br />
+            position: -webkit-sticky; /* Safari */<br />
+            position: sticky;<br />
+            top: 0;<br />
+            background-color: green;<br />
+            border: 2px solid #4CAF50;<br />
+            }
+        </h4>
     </section>
 
     <!--Float-->
@@ -417,8 +863,40 @@
     </section>
     <section class="content">
         <p>
-            Content
+            The CSS float property is used to specify the positioning and formatting of content<br />
+            For example, letting an image float to the left of text in a container<br />
+            The float property can have the following values:<br />
+            1) left - The element floats to the left of its container<br />
+            2) right - The element floats to the right of its container<br />
+            3) none - The element does not float (will be displayed just where it occurs in the text). This is default<br />
+            4) inherit - The element inherits the float value of its parent<br />
+            <br />
+            Normally, div elements will be displayed on top of each other<br />
+            If we use float: left;, we can let elements float next to each other<br />
+            Below is a sample of the float property:
         </p>
+        <h4>
+            img {<br />
+            float: left;<br />
+            }<br />
+            <br />
+            div {<br />
+            float: left;<br />
+            padding: 15px;<br />
+            }<br />
+            <br />
+            .div1 {<br />
+            background: red;<br />
+            }<br />
+            <br />
+            .div2 {<br />
+            background: yellow;<br />
+            }<br />
+            <br />
+            .div3 {<br />
+            background: green;<br />
+            }
+        </h4>
     </section>
 
     <!--Align-->
@@ -427,7 +905,35 @@
     </section>
     <section class="content">
         <p>
-            Content
+            There are many ways to align content on a webpage, and below are some examples of hoow to do so!<br />
+            <br />
+            To align a block element to the center horizontally, use margin: auto;<br />
+            This works because setting the width of the element will prevent it from stretching out to the edges of its container<br />
+            The element will take up the specified width, then the remaining space will be distributed equally to the remaining margins, like so:
+        </p>
+        <h4>
+            .center {<br />
+            margin: auto;<br />
+            width: 50%;<br />
+            border: 3px solid green;<br />
+            padding: 10px;<br />
+            }
+        </h4>
+        <p>
+            To center text inside an element, just use text-align: center;<br />
+            <br />
+            To center an image, set the left and right margin to auto and make it into a block element, like so:
+        </p>
+        <h4>
+            img {<br />
+            display: block;<br />
+            margin-left: auto;<br />
+            margin-right: auto;<br />
+            width: 40%;<br />
+            }
+        </h4>
+        <p>
+            For more examples, visit <a href="https://www.w3schools.com/css/css_align.asp">w3schools.com</a>
         </p>
     </section>
 
@@ -437,8 +943,27 @@
     </section>
     <section class="content">
         <p>
-            Content
+            The opacity property specifies the opacity/transarency of an element<br />
+            Opacity can take on a value from 0.0 - 1.0<br />
+            The lower the value, the more transparent the element will be<br />
+            The sample below shows an image that is 50% transparent
         </p>
+        <h4>
+            img {<br />
+            opacity: 0.5;<br />
+            }
+        </h4>
+        <p>
+            The opacity property is often used with the :hover selector to change the opacity on mouse-over<br />
+            <br />
+            If you use opacity to add transparency to the bakground of an element, all of its child elements will inherit the same transparency<br />
+            This can be fixed by using RGBA color values to set the background color, which will not effect its child elements:
+        </p>
+        <h4>
+            div {<br />
+            background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity */<br />
+            }
+        </h4>
     </section>
 
 
