@@ -1,0 +1,28 @@
+body {
+    background-color: #222831; /* Dark background */
+    color: #eeeeee; /* Light gray text */
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #FFD700; /* Gold headers */
+}
+
+pre code {
+    background-color: #393e46; /* Slightly lighter background for code blocks */
+    color: #fff;
+    border-radius: 5px;
+}
+
+code {
+    color: #ADD8E6; /* Light blue for keywords and variables */
+}
+
+a {
+    color: #000000; /* Black link color */
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #FFD700; /* Gold on hover */
+    }
