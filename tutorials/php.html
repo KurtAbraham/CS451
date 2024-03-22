@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Tutorials</title>
+    <link rel="stylesheet" href="tutorialStylesPHPAI.css">
+</head>
+
+<body>
+    <h1>CS 451 Internet Technology Tutorials</h1>
+    <h2>PHP Tutorials</h2>
+    <h4>Generated using Gemini (formerly Google Bard)</h4>
+
+    <section class="button">
+        <button>
+            <a href="../index.html">
+                Go Back
+            </a>
+        </button>
+    </section>
+
+    <header>
+        <h1>PHP Basics in One Page</h1>
+    </header>
+
+    <section id="introduction">
+        <h2>What is PHP?</h2>
+        <p>
+            PHP (Hypertext Preprocessor) is a server-side scripting language for creating dynamic and interactive web pages.
+            It allows developers to process information on the server before sending the resulting HTML content to the user's browser.
+        </p>
+    </section>
+
+    <section id="syntax">
+        <h2>Basic PHP Syntax</h2>
+        <p>
+            PHP code is embedded within HTML using special tags: `&lt;?php ... ?&gt;`. Here are some key elements:
+        </p>
+        <ul>
+            <li>**Comments:** Explain code and are ignored by the server (e.g. `// This is a comment` or `/* Multi-line comment */`).</li>
+            <li>**Variables:** Store information (e.g. `$message = "Hello World!";` - variable name starts with `$`).</li>
+            <li>**Echo Statements:** Output content (e.g. `echo $message;` - displays the value stored in the variable).</li>
+        </ul>
+        <p>**Example:** Displaying the current date and time:</p>
+        <pre>&lt;?php
+    echo date("Y/m/d H:i:s");
+    ?&gt;</pre>
+    </section>
+
+    <section id="variables">
+        <h2>Variables and Data Types</h2>
+        <p>
+            Variables store information used throughout your code. They have a name and a data type (e.g., string, integer).
+        </p>
+        <ul>
+            <li>**Declaring Variables:** Use `$` followed by a descriptive name (e.g., `$firstName = "John";`).</li>
+            <li>**Data Types:** Common types include string (text), integer (whole numbers), float (decimal numbers), and boolean (true/false).</li>
+        </ul>
+        <p>**Example:** Assigning values to different data types:</p>
+        <pre>&lt;?php
+    $name = "Alice";
+    $age = 30;
+    $isMember = true;
+    ?&gt;</pre>
+    </section>
+
+    <section id="operators">
+        <h2>Operators in PHP</h2>
+        <p>
+            Operators perform calculations or comparisons on data. Common types include:
+        </p>
+        <ul>
+            <li>**Arithmetic:** Addition (+), subtraction (-), multiplication (*), division (/), etc.</li>
+            <li>**Comparison:** Equal to (==), not equal to (!=), greater than (>), etc.</li>
+            <li>**Logical:** AND (&&), OR (||), NOT (!).</li>
+        </ul>
+        <p>**Example:** Checking if a user is eligible to vote (age >= 18):</p>
+        <pre>&lt;?php
+    $age = 25;
+    if ($age >= 18) {
+      echo "You are eligible to vote.";
+    } else {
+      echo "You are not eligible to vote.";
+    }
+    ?&gt;</pre>
+    </section>
+
+    <section id="resources">
+        <h2>Learn More</h2>
+        <p>This is just a taste of PHP's capabilities! Dive deeper with these resources:</p>
+        <ul>
+            <li><a href="https://www.w3schools.com/php/">W3Schools PHP Tutorial</a></li>
+            <li><a href="https://www.php.net/manual/en/index.php">PHP.net Official Documentation</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; <?php echo date("Y"); ?> Learn PHP Basics</p>
+    </footer>
+
+    <section class="button">
+        <button>
+            <a href="../index.html">
+                Go Back
+            </a>
+        </button>
+    </section>
+</body>
+
+</html>
